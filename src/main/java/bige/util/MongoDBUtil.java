@@ -9,15 +9,34 @@ import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 
+/**
+ * Utility to access to mongoDB data
+ * @author bige
+ *
+ */
 public class MongoDBUtil {
 
 	Mongo m = null;
 	DB db = null;
 
+	/**
+	 * Init MongoDBUtil
+	 * @param host
+	 * @param port
+	 * @throws Exception
+	 */
 	public MongoDBUtil(String host, int port) throws Exception {
 		this.m = new Mongo(host, port);
 	}
 
+	/**
+	 * Get value of a document
+	 * @param database
+	 * @param collection
+	 * @param rowKey
+	 * @param columnKey
+	 * @return
+	 */
 	public String get(String database, String collection, String rowKey, String columnKey) {
 		String value = null;
 		this.db = m.getDB(database);
@@ -36,6 +55,15 @@ public class MongoDBUtil {
 		return value;
 	}
 
+	/**
+	 * Put value for a document
+	 * @param database
+	 * @param collection
+	 * @param rowKey
+	 * @param columnKey
+	 * @param value
+	 * @throws Exception
+	 */
 	public void put(String database, String collection, String rowKey, String columnKey, String value)
 			throws Exception {
 		this.db = m.getDB(database);
@@ -64,8 +92,13 @@ public class MongoDBUtil {
 		}
 	}
 
-	public void clean(String keyspace) throws Exception {
-		this.db = m.getDB(keyspace);
+	/**
+	 * Drop a database
+	 * @param database
+	 * @throws Exception
+	 */
+	public void clean(String database) throws Exception {
+		this.db = m.getDB(database);
 		db.dropDatabase();
 	}
 }
