@@ -1,5 +1,9 @@
 package bige.pip;
 
+import java.util.List;
+
+import bige.database.DatabaseInterface;
+
 /**
  * 
  * @author bige
@@ -8,6 +12,7 @@ package bige.pip;
 public class AttributeManager {
 
 	private static AttributeManager instance = null;
+	private DatabaseInterface db = null;
 
 	private AttributeManager() {
 	}
@@ -64,6 +69,13 @@ public class AttributeManager {
 	 * Get data from mongoDB
 	 */
 	private void getDataFromMongoDB() {
+		
+	}
+
+	/**
+	 * Get value of a nested document ('.' INT)? ('.' fieldName)
+	 */
+	private void getNestedDocument(List<String> lst) {
 		
 	}
 }
