@@ -2,6 +2,8 @@ package bige.pdp;
 
 import bige.model.Request;
 import bige.model.Response;
+import bige.pap.PolicyManager;
+import bige.pip.AttributeManager;
 
 /**
  * The interface that applications use to make policy queries
@@ -10,6 +12,9 @@ import bige.model.Response;
  */
 public class PDPEngine {
 
+	private AttributeManager attributeManager = null;
+	private PolicyManager policyManager = null;
+	
 	/**
 	 * Init PDPEngine
 	 */

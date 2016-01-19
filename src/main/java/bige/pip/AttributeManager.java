@@ -2,6 +2,7 @@ package bige.pip;
 
 import java.util.List;
 
+import bige.database.DatabaseAccessorFactory;
 import bige.database.DatabaseInterface;
 
 /**
@@ -15,6 +16,7 @@ public class AttributeManager {
 	private DatabaseInterface db = null;
 
 	private AttributeManager() {
+		db = DatabaseAccessorFactory.getInstance().getDatabase("MongoDB", "configFile");
 	}
 
 	public static AttributeManager getInstance() {

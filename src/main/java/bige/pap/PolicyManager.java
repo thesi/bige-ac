@@ -1,5 +1,6 @@
 package bige.pap;
 
+import bige.database.DatabaseAccessorFactory;
 import bige.database.DatabaseInterface;
 import bige.pip.AttributeManager;
 
@@ -17,8 +18,9 @@ public class PolicyManager {
 	 * Init PolicyManager
 	 */
 	private PolicyManager() {
+		db = DatabaseAccessorFactory.getInstance().getDatabase("MongoDB", "configFile");
 	}
-
+	
 	public static PolicyManager getInstance() {
 		if (instance == null) {
 			instance = new PolicyManager();
@@ -30,6 +32,14 @@ public class PolicyManager {
 	 * Get applied policy for a request
 	 */
 	public void getAppliedPolicy() {
+		
+	}
+	
+	public void insertPolicy() {
+		
+	}
+	
+	public void deletePolicy() {
 		
 	}
 }
