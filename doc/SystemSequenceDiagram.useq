@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="bige.pep.PEPEngine" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/pep/PEPEngine.java" binary="false" label="pepEngine" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="17" y="0"/>    
+    <execution id="2">      
+      <position height="419" width="84" x="5" y="272"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="bige.pdp.PDPEngine" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/pdp/PDPEngine.java" binary="false" label="pdpEngine" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="185" y="0"/>    
+    <execution id="4">      
+      <position height="377" width="85" x="93" y="293"/>    
+    </execution>    
+    <execution id="11">      
+      <position height="249" width="7" x="132" y="400"/>    
+    </execution>  
+  </object>  
+  <object id="14" language="java" name="bige.antlr.RequestExpBaseVisitorImp" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/antlr/RequestExpBaseVisitorImp.java" binary="false" 
+    label="requestExpBaseVisitorImp" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="179" y="0"/>    
+    <execution id="7">      
+      <position height="21" width="178" x="182" y="322"/>    
+    </execution>  
+  </object>  
+  <object id="15" language="java" name="bige.pip.AttributeManager" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/pip/AttributeManager.java" binary="false" label="attributeManager" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="234" y="0"/>    
+    <execution id="16">      
+      <position height="126" width="122" x="182" y="99"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="21" width="122" x="364" y="493"/>    
+    </execution>    
+    <execution id="20">      
+      <position height="21" width="122" x="364" y="526"/>    
+    </execution>    
+    <execution id="21">      
+      <position height="21" width="122" x="364" y="565"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="bige.pap.PolicyManager" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/pap/PolicyManager.java" binary="false" label="policyManager" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="366" y="0"/>    
+    <execution id="23">      
+      <position height="63" width="107" x="308" y="220"/>    
+    </execution>    
+    <execution id="9">      
+      <position height="21" width="107" x="490" y="353"/>    
+    </execution>  
+  </object>  
+  <object id="26" language="java" name="bige.database.DatabaseAccessorFactory" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/database/DatabaseAccessorFactory.java" binary="false" 
+    label="databaseAccessorFactory" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="439" y="0"/>    
+    <execution id="18">      
+      <position height="84" width="174" x="419" y="120"/>    
+    </execution>    
+    <execution id="28">      
+      <position height="21" width="7" x="503" y="162"/>    
+    </execution>    
+    <execution id="25">      
+      <position height="21" width="174" x="419" y="241"/>    
+    </execution>  
+  </object>  
+  <object id="29" language="java" name="bige.antlr.ConditionalExpressionEvalutor" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/antlr/ConditionalExpressionEvalutor.java" binary="false" 
+    label="conditionalExpressionEvalutor" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="639" y="0"/>    
+    <execution id="13">      
+      <position height="213" width="196" x="597" y="415"/>    
+    </execution>  
+  </object>  
+  <object id="34" language="java" name="bige.antlr.ConditionalExpBaseVisitorImp" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/antlr/ConditionalExpBaseVisitorImp.java" binary="false" 
+    label="conditionalExpBaseVisitorImp" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="868" y="0"/>    
+    <execution id="31">      
+      <position height="21" width="194" x="797" y="436"/>    
+    </execution>  
+  </object>  
+  <object id="35" language="java" name="bige.antlr.model.LogicalExpression" project="bige-ac" 
+    file="/bige-ac/src/main/java/bige/antlr/model/LogicalExpression.java" binary="false" label="logicalExpression" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="946" y="0"/>    
+    <execution id="33">      
+      <position height="135" width="128" x="995" y="472"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="decide(bige.model.Request):bige.model.Response" asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="6" operation="visitRequest(bige.antlr.ConditionalExpParser.ExpressionContext):java.lang.Void" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </message>  
+  <message id="8" operation="getAppliedPolicy():void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </message>  
+  <message id="10" operation="processRequest():void" asynchronous="false">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="11"/>  
+  </message>  
+  <message id="12" asynchronous="false">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="13"/>  
+  </message>  
+  <message id="17" operation="getDatabase(java.lang.String,java.lang.String):bige.database.DatabaseInterface" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="24" operation="getDatabase(java.lang.String,java.lang.String):bige.database.DatabaseInterface" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>  
+  <message id="27" operation="getInstance():bige.database.DatabaseAccessorFactory" asynchronous="false">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="28"/>  
+  </message>  
+  <message id="30" operation="visit(org.antlr.v4.runtime.tree.ParseTree):java.lang.Void" asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="31"/>  
+  </message>  
+  <message id="32" operation="evaluate():void" asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="33"/>  
+  </message>  
+  <message id="36" operation="getSubjectAttribute(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>  
+  <message id="37" operation="getEnvironmentAttribute(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="20"/>  
+  </message>  
+  <message id="38" operation="getResourceAttribute(java.lang.String):void" asynchronous="false">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>
+</sequence-diagram>

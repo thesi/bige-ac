@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.9" icons="true">  
+  <object id="1" language="java" name="com.att.research.xacmlatt.pdp.ATTPDPEngineFactory" project="XACML-PDP" 
+    file="/XACML-PDP/src/com/att/research/xacmlatt/pdp/ATTPDPEngineFactory.java" binary="false" 
+    label="attpdpEngineFactory" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="270" y="0"/>    
+    <execution id="2">      
+      <position height="72" width="184" x="5" y="195"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="com.att.research.xacmlatt.pdp.ATTPDPEngine" project="XACML-PDP" 
+    file="/XACML-PDP/src/com/att/research/xacmlatt/pdp/ATTPDPEngine.java" binary="false" label="attpdpEngine" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="381" y="0"/>    
+    <execution id="4">      
+      <position height="24" width="171" x="193" y="219"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="72" width="171" x="193" y="273"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="com.att.research.xacmlatt.pdp.std.StdEvaluationContextFactory" 
+    project="XACML-PDP" file="/XACML-PDP/src/com/att/research/xacmlatt/pdp/std/StdEvaluationContextFactory.java" 
+    binary="false" label="stdEvaluationContextFactory" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="372" y="0"/>    
+    <execution id="10">      
+      <position height="72" width="230" x="368" y="353"/>    
+    </execution>    
+    <execution id="8">      
+      <position height="24" width="230" x="368" y="297"/>    
+    </execution>    
+    <execution id="13">      
+      <position height="168" width="230" x="368" y="446"/>    
+    </execution>  
+  </object>  
+  <object id="16" language="java" name="com.att.research.xacmlatt.pdp.std.StdEvaluationContext" project="XACML-PDP" 
+    file="/XACML-PDP/src/com/att/research/xacmlatt/pdp/std/StdEvaluationContext.java" binary="false" 
+    label="stdEvaluationContext" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="457" y="0"/>    
+    <execution id="12">      
+      <position height="24" width="191" x="602" y="377"/>    
+    </execution>    
+    <execution id="15">      
+      <position height="120" width="191" x="602" y="470"/>    
+    </execution>  
+  </object>  
+  <object id="19" language="java" name="com.att.research.xacmlatt.pdp.std.StdPolicyFinder" project="XACML-PDP" 
+    file="/XACML-PDP/src/com/att/research/xacmlatt/pdp/std/StdPolicyFinder.java" binary="false" label="policyFinder" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="817" y="0"/>    
+    <execution id="18">      
+      <position height="72" width="205" x="797" y="494"/>    
+    </execution>  
+  </object>  
+  <object id="22" language="java" name="com.att.research.xacml.std.pip.finders.EngineFinder" project="XACML" 
+    file="/XACML/src/com/att/research/xacml/std/pip/finders/EngineFinder.java" binary="false" label="pipFinder" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="1034" y="0"/>    
+    <execution id="21">      
+      <position height="24" width="174" x="1006" y="518"/>    
+    </execution>    
+    <execution id="23">      
+      <position height="72" width="174" x="992" y="563"/>    
+    </execution>  
+  </object>  
+  <object id="26" language="java" name="com.att.research.xacml.api.pip.PIPResponse" project="XACML" 
+    file="/XACML/src/com/att/research/xacml/api/pip/PIPResponse.java" binary="false" label="pipResponse" 
+    type="interface" autoSize="true">    
+    <position height="-1" width="-1" x="1272" y="0"/>    
+    <execution id="25">      
+      <position height="24" width="174" x="1170" y="587"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="decide(com.att.research.xacml.api.Request):com.att.research.xacml.api.Response" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="7" 
+    operation="getEvaluationContext(com.att.research.xacml.api.Request):com.att.research.xacmlatt.pdp.eval.EvaluationContext" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="11" 
+    operation="StdEvaluationContext(com.att.research.xacml.api.Request,com.att.research.xacmlatt.pdp.policy.PolicyFinder,com.att.research.xacml.api.pip.PIPFinder)" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="14" 
+    operation="getRootPolicyDef():com.att.research.xacmlatt.pdp.policy.PolicyFinderResult&lt;PolicyDef&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="15"/>  
+  </message>  
+  <message id="17" 
+    operation="getRootPolicyDef(com.att.research.xacmlatt.pdp.eval.EvaluationContext):com.att.research.xacmlatt.pdp.policy.PolicyFinderResult&lt;PolicyDef&gt;" 
+    asynchronous="false">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="20" asynchronous="false">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="21"/>  
+  </message>  
+  <message id="24" operation="getAttributes():java.util.Collection&lt;Attribute&gt;" asynchronous="false">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="25"/>  
+  </message>
+</sequence-diagram>

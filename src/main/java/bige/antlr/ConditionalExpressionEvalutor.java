@@ -9,4 +9,5 @@ public class ConditionalExpressionEvalutor {
 	public void PartialEvaluate(String expression) {
 		
 	}
+
 }
